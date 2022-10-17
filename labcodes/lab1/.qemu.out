@@ -1,0 +1,70 @@
+c[?7l[2J[0mSeaBIOS (version 1.15.0-1)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+07F8B4A0+07ECB4A0 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from Hard Disk..(THU.CST) os is loading ...
+
+Special kernel symbols:
+  entry  0x00100000 (phys)
+  etext  0x0010364d (phys)
+  edata  0x0010fa16 (phys)
+  end    0x00110d68 (phys)
+Kernel executable memory footprint: 68KB
+ebp=: 0x00007b28 | eip=: 0x001009b5 | args=: 0x00010094 0x00010094 0x00007b58 0x00100093 
+    kern/debug/kdebug.c:305: print_stackframe+21
+ebp=: 0x00007b38 | eip=: 0x00100cac | args=: 0x00000000 0x00000000 0x00000000 0x00007ba8 
+    kern/debug/kmonitor.c:125: mon_backtrace+10
+ebp=: 0x00007b58 | eip=: 0x00100093 | args=: 0x00000000 0x00007b80 0xffff0000 0x00007b84 
+    kern/init/init.c:48: grade_backtrace2+33
+ebp=: 0x00007b78 | eip=: 0x001000c1 | args=: 0x00000000 0xffff0000 0x00007ba4 0x00000029 
+    kern/init/init.c:53: grade_backtrace1+40
+ebp=: 0x00007b98 | eip=: 0x001000e1 | args=: 0x00000000 0x00100000 0xffff0000 0x0000001d 
+    kern/init/init.c:58: grade_backtrace0+23
+ebp=: 0x00007bb8 | eip=: 0x00100109 | args=: 0x0010367c 0x00103660 0x00001352 0x00000000 
+    kern/init/init.c:63: grade_backtrace+34
+ebp=: 0x00007be8 | eip=: 0x00100051 | args=: 0x00000000 0x00000000 0x00000000 0x00007c4f 
+    kern/init/init.c:28: kern_init+80
+ebp=: 0x00007bf8 | eip=: 0x00007d72 | args=: 0xc031fcfa 0xc08ed88e 0x64e4d08e 0xfa7502a8 
+    <unknow>: -- 0x00007d71 --
+++ setup timer interrupts
+0: @ring 0
+0:  cs = 8
+0:  ds = 10
+0:  es = 10
+0:  ss = 10
++++ switch to  user  mode +++
+1: @ring 3
+1:  cs = 1b
+1:  ds = 23
+1:  es = 23
+1:  ss = 23
++++ switch to kernel mode +++
+100 ticks
+End of Test.
+kernel panic at kern/trap/trap.c:18:
+    EOT: kernel seems ok.
+stack trackback:
+ebp=: 0x00110c08 | eip=: 0x001009b5 | args=: 0x0010394c 0x00110c4c 0x00000012 0x00000000 
+    kern/debug/kdebug.c:305: print_stackframe+21
+ebp=: 0x00110c38 | eip=: 0x00100d1d | args=: 0x00103a0e 0x00000012 0x001039f8 0x00000000 
+    kern/debug/panic.c:27: __panic+103
+ebp=: 0x00110c58 | eip=: 0x001018cc | args=: 0x00000000 0x00000000 0x00000000 0x00000000 
+    kern/trap/trap.c:0: print_ticks+65
+ebp=: 0x00110c88 | eip=: 0x00101d97 | args=: 0x00110cb4 0x00000000 0x00000000 0x00000000 
+    kern/trap/trap.c:158: trap_dispatch+162
+ebp=: 0x00110ca8 | eip=: 0x00101f4d | args=: 0x00110cb4 0x00000000 0x00010094 0x00007b98 
+    kern/trap/trap.c:217: trap+16
+ebp=: 0x00007b98 | eip=: 0x00101f68 | args=: 0x001036e8 0x00433400 0x00409c00 0x00402e1d 
+    kern/trap/trapentry.S:24: <unknown>+0
+ebp=: 0x00007bb8 | eip=: 0x00100217 | args=: 0x0010367c 0x00103660 0x00001352 0x00000000 
+    kern/init/init.c:114: lab1_switch_test+49
+ebp=: 0x00007be8 | eip=: 0x0010006f | args=: 0x00000000 0x00000000 0x00000000 0x00007c4f 
+    kern/init/init.c:40: kern_init+110
+ebp=: 0x00007bf8 | eip=: 0x00007d72 | args=: 0xc031fcfa 0xc08ed88e 0x64e4d08e 0xfa7502a8 
+    <unknow>: -- 0x00007d71 --
+Welcome to the kernel debug monitor!!
+Type 'help' for a list of commands.
+K> 
